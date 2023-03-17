@@ -1,0 +1,143 @@
+USE [search]
+GO
+/****** Object:  Table [dbo].[tbl_Register]    Script Date: 10/02/2015 12:17:50 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[tbl_Register](
+	[username] [varchar](50) NOT NULL,
+	[password] [varchar](50) NOT NULL,
+	[Address] [varchar](50) NULL,
+	[Email_id] [varchar](50) NULL,
+	[Conactno] [varchar](50) NULL,
+	[Role] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[username] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+INSERT [dbo].[tbl_Register] ([username], [password], [Address], [Email_id], [Conactno], [Role]) VALUES (N'admin', N'admin', N'admin', N'admin@gmail.com', NULL, N'admin')
+INSERT [dbo].[tbl_Register] ([username], [password], [Address], [Email_id], [Conactno], [Role]) VALUES (N'raj', N'raj', N'pondi', N'raj@gmail.com', N'9879898798', N'user')
+INSERT [dbo].[tbl_Register] ([username], [password], [Address], [Email_id], [Conactno], [Role]) VALUES (N'surandar', N'sura', N'hhhhh', N'sura@gmail.com', N'9500556915', N'user')
+/****** Object:  Table [dbo].[ImageSearch]    Script Date: 10/02/2015 12:17:50 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[ImageSearch](
+	[Id] [bigint] IDENTITY(1,1) NOT NULL,
+	[ImagePath] [varchar](max) NULL,
+	[Categories] [varchar](max) NULL,
+	[Description] [varchar](max) NULL,
+	[Tags] [varchar](max) NULL,
+	[approve] [bit] NULL,
+	[Color] [varchar](max) NULL,
+	[R] [varchar](50) NULL,
+	[G] [varchar](50) NULL,
+	[B] [varchar](50) NULL,
+ CONSTRAINT [PK_ImageSearch] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+SET IDENTITY_INSERT [dbo].[ImageSearch] ON
+INSERT [dbo].[ImageSearch] ([Id], [ImagePath], [Categories], [Description], [Tags], [approve], [Color], [R], [G], [B]) VALUES (1, N'~/images/download.jpg', N'apple fruits', N'The apple is the pomaceous fruit of the apple tree, species Malus domestica in the rose family (Rosaceae). It is one of the most widely cultivated tree fruits, and the most widely known of the many members of genus Malus that are used by humans. Apples grow on small, deciduous trees. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today. Apples have been grown for thousands of years in Asia and Europe, and were brought to North America by European colonists. Apples have been present in the mythology and religions of many cultures, including Norse, Greek and Christian traditions. In 2010, the fruit''s genome was decoded, leading to new understandings of disease control and selective breeding in apple production.
+There are more than 7,500 known cultivars of apples, resulting in a range of desired characteristics. Different cultivars are bred for various tastes and uses, including cooking, fresh eating and cider production. Domestic apples are generally propagated by grafting, although wild apples grow readily from seed. Trees are prone to a number of fungal, bacterial and pest problems, which can be controlled by a number of organic and non-organic means.
+About 69 million tons of apples were grown worldwide in 2010, and China produced almost half of this total. The United States is the second-leading producer, with more than 6% of world production. Turkey is third, followed by Italy, India and Poland. Apples are often eaten raw, but can also be found in many prepared foods (especially desserts) and drinks. Many beneficial health effects are thought to result from eating apples; however, two forms of allergies are seen to various proteins found in the fruit.', N'apple fruits,apple,red,green fruits', 1, NULL, NULL, NULL, NULL)
+INSERT [dbo].[ImageSearch] ([Id], [ImagePath], [Categories], [Description], [Tags], [approve], [Color], [R], [G], [B]) VALUES (3, N'~/images/Tulips.jpg', N'Dell', N'sdsdasd', N'sd,ds', 1, NULL, NULL, NULL, NULL)
+INSERT [dbo].[ImageSearch] ([Id], [ImagePath], [Categories], [Description], [Tags], [approve], [Color], [R], [G], [B]) VALUES (4, N'~/images/asm3.jpg', N'ASM', N'Asm is a logo ,i created for that company ,test', N'asm,company', 1, NULL, NULL, NULL, NULL)
+INSERT [dbo].[ImageSearch] ([Id], [ImagePath], [Categories], [Description], [Tags], [approve], [Color], [R], [G], [B]) VALUES (5, N'~/images/75px-Apple_logo_black.svg.png', N'apple mobile', N'Apple Inc. is an American multinational corporation headquartered in Cupertino, California, that designs, develops, and sells consumer electronics, computer software and personal computers. Its best-known hardware products are the Mac line of computers, the iPod media player, the iPhone smartphone, and the iPad tablet computer. Its consumer software includes the OS X and iOS operating systems, the iTunes media browser, the Safari web browser, and the iLife and iWork creativity and productivity suites.
+Apple was founded by Steve Jobs, Steve Wozniak, and Ronald Wayne on April 1, 1976 to develop and sell personal computers. It was incorporated as Apple Computer, Inc. on January 3, 1977, and was renamed as Apple Inc. on January 9, 2007 to reflect its shifted focus towards consumer electronics.
+Apple is the world''s second-largest information technology company by revenue after Samsung Electronics, and the world''s third-largest mobile phone maker after Samsung and Nokia.[4] Fortune magazine named Apple the most admired company in the United States in 2008, and in the world from 2008 to 2012.[5][6][7][8][9] On September 30, 2013, Apple surpassed Coca-Cola to become the world''s most valuable brand in the Omnicom Group''s "Best Global Brands" report.[10] However, the company has received criticism for its contractors'' labor practices, and for Apple''s own environmental and business practices.
+As of May 2013, Apple maintains 408 retail stores in fourteen countries[11][12] as well as the online Apple Store and iTunes Store,[13] the latter of which is the world''s largest music retailer.[14] Apple is the largest publicly traded corporation in the world by market capitalization, with an estimated value of US$415 billion as of March 2013. As of September 29, 2012, the company had 72,800 permanent full-time employees and 3,300 temporary full-time employees worldwide. Its worldwide annual revenue in 2012 totalled $156 billion.[15] In May 2013, Apple entered the top ten of the Fortune 500 list of companies for the first time, rising 11 places above its 2012 ranking to take the sixth position.[16]', N'apple,mobile,ipad,apple brand', 1, NULL, NULL, NULL, NULL)
+INSERT [dbo].[ImageSearch] ([Id], [ImagePath], [Categories], [Description], [Tags], [approve], [Color], [R], [G], [B]) VALUES (6, N'~/images/260px-Football4.png', N'football sports', N'Football refers to a number of sports that involve, to varying degrees, kicking a ball with the foot to score a goal. The most popular of these sports worldwide is association football, more commonly known as just "football" or "soccer". Unqualified, the word football applies to whichever form of football is the most popular in the regional context in which the word appears, including association football, as well as American football, Australian rules football, Canadian football, Gaelic football, rugby league, rugby union,[1] and other related games. These variations of football are known as football codes.
+Various forms of football can be identified in history, often as popular peasant games. Contemporary codes of football can be traced back to the codification of these games at English public schools in the eighteenth and nineteenth century.[2][3] The influence and power of the British Empire allowed these rules of football to spread to areas of British influence outside of the directly controlled Empire,[4] though by the end of the nineteenth century, distinct regional codes were already developing: Gaelic Football, for example, deliberately incorporated the rules of local traditional football games in order to maintain their heritage.[5] In 1888, The Football League was founded in England, becoming the first of many professional football competitions. During the twentieth century, several of the various kinds of football grew to become among the most popular team sports in the world.[6]', N'FOOT BALL,SPORTS', 1, NULL, NULL, NULL, NULL)
+INSERT [dbo].[ImageSearch] ([Id], [ImagePath], [Categories], [Description], [Tags], [approve], [Color], [R], [G], [B]) VALUES (8, N'~/images/Penguins.jpg', N'tree', N'tree is source for rain', N'tree', 1, NULL, NULL, NULL, NULL)
+INSERT [dbo].[ImageSearch] ([Id], [ImagePath], [Categories], [Description], [Tags], [approve], [Color], [R], [G], [B]) VALUES (9, N'~/images/Jellyfish.jpg', N'sun', N'sun raise', N'sun,rais', 1, NULL, NULL, NULL, NULL)
+INSERT [dbo].[ImageSearch] ([Id], [ImagePath], [Categories], [Description], [Tags], [approve], [Color], [R], [G], [B]) VALUES (10, N'~/images/india-republic-day-2015-5071910073270272-hp.jpg', N'car', N'my best car ', N'car,new car,old car', 1, N'244163116', N'244', N'163', N'116')
+SET IDENTITY_INSERT [dbo].[ImageSearch] OFF
+/****** Object:  Table [dbo].[falsehits]    Script Date: 10/02/2015 12:17:50 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[falsehits](
+	[keyword] [varchar](50) NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'cloud')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'network')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'computer graphics')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'dell')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'dl')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'computer graphics')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'computer graphics')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'computer graphics')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'apple fruits')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'apple fruits')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'tree')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'apple fruits')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'apple fruits')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'apple fruits')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'apple fruits')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'apple fruits')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'Dell')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'apple mobile')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'sun')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'car')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'car')
+INSERT [dbo].[falsehits] ([keyword]) VALUES (N'apple fruits')
+/****** Object:  Table [dbo].[data]    Script Date: 10/02/2015 12:17:50 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[data](
+	[keyword] [varchar](100) NULL,
+	[category] [varchar](50) NULL,
+	[file_path] [varchar](100) NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'abstract class', N'class', N'D:\Similarity Search\search\data\abstract class.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'virtual', N'v', N'D:\Similarity Search\search\data\virtual.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'access modifiers', N'modifiers', N'D:\Similarity Search\search\data\access modifiers.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'ado.net', N'.net', N'D:\Similarity Search\search\data\ado.net.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'authentication modes', N'modes', N'D:\Similarity Search\search\data\authentication modes.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'class in .net', N'.net', N'D:\Similarity Search\search\data\class in .net.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'class in ado.net', N'ado.net', N'D:\Similarity Search\search\data\class in ado.net.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'class in c#', N'c#', N'D:\Similarity Search\search\data\class in c#.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'class in data', N'data', N'D:\Similarity Search\search\data\class in data.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'class in vb.net', N'vb.net', N'D:\Similarity Search\search\data\class in vb.net.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'class using java', N'java', N'D:\Similarity Search\search\data\class using java.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'command java', N'java', N'D:\Similarity Search\search\data\command java.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'console application', N'application', N'D:\Similarity Search\search\data\console application.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'datatypes in java', N'java', N'D:\Similarity Search\search\data\datatypes in java.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'file in c#', N'c#', N'D:\Similarity Search\search\data\file in c#.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'file in vb', N'vb', N'D:\Similarity Search\search\data\file in vb.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'themes in ASP.net', N'ASP.net', N'D:\Similarity Search\search\data\themes in ASP.net.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'thread in java', N'java', N'D:\Similarity Search\search\data\thread in java.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'cimput', N'class', N'D:\Similarity Search\search\data\cimput.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'class in java', N'java', N'D:\Similarity Search\search\data\class in java.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'class vb.net', N'vb.net', N'D:\Similarity Search\search\data\class vb.net.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'datatype in c#', N'c#', N'D:\Similarity Search\search\data\datatype in c#.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'file in java', N'java', N'D:\Similarity Search\search\data\file in java.txt')
+INSERT [dbo].[data] ([keyword], [category], [file_path]) VALUES (N'triggers in c#', N'c#', N'D:\Similarity Search\search\data\triggers in c#.txt')
